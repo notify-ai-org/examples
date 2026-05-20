@@ -1,9 +1,9 @@
 package com.notify.banking.service;
 
 import com.notify.agent.annotations.*;
-import com.notify.agent.models.subject.EmailSubject;
-import com.notify.agent.models.subject.SmsSubject;
-import com.notify.agent.models.subject.Subject;
+import com.notify.agent.client.models.subject.EmailSubject;
+import com.notify.agent.client.models.subject.SmsSubject;
+import com.notify.agent.client.models.subject.Subject;
 import com.notify.banking.model.*;
 import com.notify.banking.store.AccountStore;
 import com.notify.banking.store.TransactionStore;
