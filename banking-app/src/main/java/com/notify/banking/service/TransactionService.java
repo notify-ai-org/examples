@@ -42,21 +42,21 @@ public class TransactionService {
     // EVENTS
     // ═══════════════════════════════════════════
 
-    @Event(key = "SUSPICIOUS_LOGIN", description = "Suspicious login attempt detected on an account", eventType = "static", scheduleIntent = "immediate", preferredTimeWindow = "00:00-23:59", priority = 10, payload = LoginPayload.class)
+    @Event(key = "SUSPICIOUS_LOGIN", description = "Suspicious login attempt detected on an account", eventType = "static", scheduleIntent = "immediate", preferredTimeWindow = "00:00-23:59", priority = 5, payload = LoginPayload.class)
     public LoginPayload flagSuspiciousLogin(LoginPayload payload) {
         log.warn("Suspicious login detected for user {} from {} ({})", payload.getUserId(), payload.getIpAddress(),
                 payload.getLocation());
         return payload;
     }
 
-    @Event(key = "OTP_REQUESTED", description = "User requested a one-time password", eventType = "static", scheduleIntent = "immediate", preferredTimeWindow = "00:00-23:59", priority = 10, payload = OtpPayload.class)
+    @Event(key = "OTP_REQUESTED", description = "User requested a one-time password", eventType = "static", scheduleIntent = "immediate", preferredTimeWindow = "00:00-23:59", priority = 5, payload = OtpPayload.class)
     public OtpPayload requestOtp(OtpPayload payload) {
         log.info("OTP requested for user {} via {} — code: {}", payload.getUserId(), payload.getChannel(),
                 payload.getOtpCode());
         return payload;
     }
 
-    @Event(key = "LARGE_TRANSFER", description = "Large fund transfer initiated", eventType = "static", scheduleIntent = "immediate", preferredTimeWindow = "09:00-17:00", priority = 8, payload = TransactionPayload.class)
+    @Event(key = "LARGE_TRANSFER", description = "Large fund transfer initiated", eventType = "static", scheduleIntent = "immediate", preferredTimeWindow = "09:00-17:00", priority = 4, payload = TransactionPayload.class)
     public TransactionPayload processLargeTransfer(TransactionPayload payload) {
         log.info("Large transfer: {} -> {} — ${} {}", payload.getFromAccountId(), payload.getToAccountId(),
                 payload.getAmount(), payload.getCurrency());

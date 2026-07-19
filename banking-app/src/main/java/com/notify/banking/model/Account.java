@@ -1,14 +1,27 @@
 package com.notify.banking.model;
 
+import com.notify.agent.annotations.Model;
+import com.notify.agent.annotations.Vocabulary;
+
 /**
- * In-memory account representation. Not a @Model — this is internal data.
+ * In-memory account representation.
  */
+@Model(description = "Bank account profile used to resolve notification recipients and account context")
 public class Account {
 
+    @Vocabulary(name = "accountId", description = "Unique bank account identifier")
     private String id;
+
+    @Vocabulary(name = "holderName", description = "Full name of the account holder")
     private String holderName;
+
+    @Vocabulary(name = "email", description = "Account holder email address for banking notifications")
     private String email;
+
+    @Vocabulary(name = "phone", description = "Account holder phone number for SMS banking notifications")
     private String phone;
+
+    @Vocabulary(name = "balance", description = "Current available account balance")
     private double balance;
 
     public Account() {}

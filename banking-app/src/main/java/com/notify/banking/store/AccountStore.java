@@ -16,9 +16,9 @@ public class AccountStore {
     private final Map<String, Account> accounts = new ConcurrentHashMap<>();
 
     public AccountStore() {
-        accounts.put("ACC-1", new Account("ACC-1", "David Park", "david.park@example.com", "+1-555-0201", 125000.50));
-        accounts.put("ACC-2", new Account("ACC-2", "Emily Chen", "emily.chen@example.com", "+1-555-0202", 45000.00));
-        accounts.put("ACC-3", new Account("ACC-3", "Frank Miller", "frank.miller@example.com", "+1-555-0203", 250000.75));
+        accounts.put("ACC-1", new Account("ACC-1", "David Park", "rohan.nn1203@gmail.com", "+1-555-0201", 125000.50));
+        accounts.put("ACC-2", new Account("ACC-2", "Emily Chen", "rohan.nn1203@gmail.com", "+1-555-0202", 45000.00));
+        accounts.put("ACC-3", new Account("ACC-3", "Frank Miller", "rohan.nn1203@gmail.com", "+1-555-0203", 250000.75));
     }
 
     public Account get(String accountId) {
