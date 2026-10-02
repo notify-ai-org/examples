@@ -1,0 +1,8 @@
+[submodule "ecommerce-app"]
+	path = ecommerce-app
+	url = https://github.com/notify-ai-org/ecommerce-app.git
+	branch = main
+[submodule "banking-app-go"]
+	path = banking-app-go
+	url = https://github.com/notify-ai-org/banking-app-go.git
+	branch = main
